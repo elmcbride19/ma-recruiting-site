@@ -508,19 +508,46 @@ body {
 
   .schedule-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .schedule-card,
+  .spring-card {
+    padding: 14px 16px;
+  }
+
+  .schedule-row {
+    grid-template-columns: 110px 1fr 55px;
+    column-gap: 8px;
+    padding: 6px 0;
+  }
+
+  .sched-date,
+  .sched-team,
+  .sched-loc,
+  .sched-loc-home,
+  .sched-loc-away {
+    font-size: 0.85rem;
+  }
+
+  .spring-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .qb-main {
     gap: 12px;
   }
-  
+
   .qb-break {
     display: block;
     height: 3px;
   }
+
   .qb-arrow-wrap {
-  display: none;
-}
+    display: none;
+  }
+
   .qb-photo-wrap {
     width: 80px;
     height: 80px;
@@ -531,26 +558,20 @@ body {
     width: 30px;
     height: 30px;
   }
+
   .qb-icons {
-  gap: 6px;
-}
-  .qb-text h3 {
-  font-size: 0.95rem;
-}
-
-.qb-text p {
-  font-size: 0.82rem;
-}
-
-.qb-details p {
-  font-size: 0.8rem;
-}
-
-@media (max-width: 640px) {
-
-  .spring-card {
-    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
-}
+  .qb-text h3 {
+    font-size: 0.95rem;
+  }
+
+  .qb-text p {
+    font-size: 0.82rem;
+  }
+
+  .qb-details p {
+    font-size: 0.8rem;
+  }
 }
