@@ -241,6 +241,42 @@ body {
   display: block;
 }
 
+.photo-Jarrett {
+  transform: scale(2.4) translateX(-1.5%);
+  transform-origin: center 19%;
+}
+
+.photo-King {
+  transform: scale(2.5) translateX(1%);
+  transform-origin: center 21%;
+}
+
+.photo-Reid {
+  transform: scale(2.4) translateX(1%);
+  transform-origin: center 13%;
+}
+
+.photo-Ali {
+  transform: scale(2.5) translateX(1%);
+  transform-origin: center 27%;
+}
+
+.photo-up-more {
+  object-position: center 10%;
+}
+
+.photo-down {
+  object-position: center 40%;
+}
+
+.photo-left {
+  object-position: 35% top;
+}
+
+.photo-right {
+  object-position: 70% top;
+}
+
 /* QUICK BOARD TEXT */
 
 .qb-text {
@@ -348,7 +384,6 @@ body {
 }
 
 /* SCHEDULE GRAPHICS */
-
 .schedule-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -359,6 +394,7 @@ body {
 
 .schedule-item {
   text-align: center;
+  align-self: start;
 }
 
 .schedule-item h3 {
@@ -385,15 +421,18 @@ body {
   display: block;
 }
 
-.schedule-card {
+.schedule-card,
+.spring-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-top: 5px solid var(--navy);
   border-radius: 12px;
   box-shadow: var(--shadow);
   padding: 16px 20px;
-  align-content: center;
+}
 
+.schedule-card {
+  align-content: start;
 }
 
 .schedule-row {
@@ -444,6 +483,8 @@ body {
 .spring-card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
   align-content: center;
   gap: 14px;
   background: var(--white);
@@ -529,9 +570,11 @@ body {
   .sched-loc-away {
     font-size: 0.85rem;
   }
-
+  
   .spring-card {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-flow: row;
     gap: 10px;
   }
 
