@@ -75,34 +75,21 @@ body {
 }
 /* HEADER */
 
-/* Default header setup for football/baseball/basketball */
+/* DEFAULT HEADER (football / baseball / basketball) */
+
 .site-header {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
+/* responsive header image – shows full image */
 
-.site-header img {
-  width: 100vw;
-  height: 320px;
-  object-fit: cover;
-  object-position: center 55%;
+.header-photo {
+  width: 100%;
+  height: auto;
   display: block;
 }
-.site-header2 {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
 
-.site-header2 img {
-  width: 100vw;
-  height: 320px;
-  object-fit: cover;
-  object-position: center 22%;
-  display: block;
-}
 
 /* Volleyball-only override */
 .volleyball-header {
@@ -791,6 +778,29 @@ body {
   }
 }
 
+@media (max-width: 1000px) {
+  .quick-board2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .quick-board2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-photo {
+    height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-photo {
+    height: 180px;
+  }
+}
 .coming-soon-box {
   background: var(--white);
   border: 1px solid var(--border);
