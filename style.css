@@ -82,11 +82,25 @@ body {
   padding: 0;
 }
 
+
 .site-header img {
   width: 100vw;
   height: 320px;
   object-fit: cover;
   object-position: center 55%;
+  display: block;
+}
+.site-header2 {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header2 img {
+  width: 100vw;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 22%;
   display: block;
 }
 
@@ -240,7 +254,7 @@ body {
   font-size: 1.35rem;
 }
 
-/* QUICK BOARD */
+/* QUICK BOARD BASE — FOOTBALL / BASEBALL / VOLLEYBALL */
 
 .quick-board {
   display: grid;
@@ -257,8 +271,6 @@ body {
   box-shadow: var(--shadow);
   min-height: 120px;
 }
-
-/* EXPANDABLE CARD */
 
 .qb-dropdown {
   width: 100%;
@@ -281,8 +293,6 @@ body {
   width: 100%;
 }
 
-/* PLAYER IMAGE IN QUICK BOARD */
-
 .qb-photo-wrap {
   width: 110px;
   height: 110px;
@@ -301,46 +311,9 @@ body {
   display: block;
 }
 
-.photo-Jarrett {
-  transform: scale(2.4) translateX(-1.5%);
-  transform-origin: center 19%;
-}
-
-.photo-Knox {
-  transform: scale(2.5) translateX(-1.5%);
-  transform-origin: center 21%;
-}
-
-.photo-Reid {
-  transform: scale(2.4) translateX(1%);
-  transform-origin: center 13%;
-}
-
-.photo-Ali {
-  transform: scale(2.5) translateX(1%);
-  transform-origin: center 27%;
-}
-
-.photo-up {
-  object-position: center 10%;
-}
-
-.photo-down {
-  object-position: center 40%;
-}
-
-.photo-left {
-  object-position: 35% top;
-}
-
-.photo-right {
-  object-position: 70% top;
-}
-
-/* QUICK BOARD TEXT */
-
 .qb-text {
   flex: 1;
+  min-width: 0;
 }
 
 .qb-text h3 {
@@ -355,13 +328,12 @@ body {
   font-size: 1.05rem;
 }
 
-/* QUICK BOARD RIGHT SIDE */
-
 .qb-right {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .qb-icons {
@@ -413,36 +385,176 @@ body {
   display: none;
 }
 
+
+/* BASKETBALL QUICK BOARD ONLY */
+
+.quick-board2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* convert card layout to compact 3-column structure */
+
+.quick-board2 .qb-main {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+/* center text relative to photo */
+
+.quick-board2 .qb-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* restore icon column alignment */
+
+.quick-board2 .qb-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* restore icon sizing */
+
+.quick-board2 .qb-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quick-board2 .qb-icons a {
+  width: 34px;
+  height: 34px;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+.quick-board2 .qb-icons img {
+  padding: 3px;
+}
+
+/* resize photo for 3-column cards */
+
+.quick-board2 .qb-photo-wrap {
+  width: 78px;
+  height: 78px;
+}
+
+/* basketball text sizing */
+
+.quick-board2 .qb-name {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.quick-board2 .qb-meta {
+  font-size: 0.95rem;
+  margin: 2px 0 0;
+}
+
+.quick-board2 .qb-measure {
+  font-size: 0.75rem;
+  margin: 2px 0 0;
+}
+/* DETAILS */
+
 .qb-details {
   margin-top: 6px;
   padding-top: 6px;
   border-top: 1px solid var(--border);
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   column-gap: 18px;
   row-gap: 1px;
-
   text-align: center;
 }
 
-.qb-details p {
-  margin: 1;
+.qb-details2 {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 18px;
+  row-gap: 6px;
+  text-align: center;
+}
+
+.qb-details p,
+.qb-details2 p {
+  margin: 1px 0;
   padding: 0;
-  line-height: 1.2;
+  line-height: 1.35;
   font-size: 1rem;
 }
 
-.qb-dropdown[open] .qb-details {
-  opacity: 1;
-  transform: translateY(0);
+.quick-board2 .qb-details2 p {
+  font-size: 0.8rem;
 }
 
 .qb-dropdown[open] .qb-arrow {
   transform: rotate(180deg);
 }
 
+
+/* PHOTO POSITIONING */
+
+.photo-Jarrett {
+  transform: scale(2.4) translateX(-1.5%);
+  transform-origin: center 19%;
+}
+
+.photo-Jarrett2 {
+  transform: scale(2.5) translateX(-4%);
+  transform-origin: center 12%;
+}
+
+.photo-Mason {
+  transform: scale(2.5) translateX(0.5%);
+  transform-origin: center 10%;
+}
+
+.photo-Caleb {
+  transform: scale(2.7) translateX(0.5%);
+  transform-origin: center 15%;
+}
+.photo-Knox {
+  transform: scale(2.5) translateX(-1.5%);
+  transform-origin: center 21%;
+}
+
+.photo-Reid {
+  transform: scale(2.4) translateX(1%);
+  transform-origin: center 13%;
+}
+
+.photo-Ali {
+  transform: scale(2.5) translateX(1%);
+  transform-origin: center 27%;
+}
+
+.photo-up {
+  object-position: center 10%;
+}
+
+.photo-down {
+  object-position: center 40%;
+}
+
+.photo-left {
+  object-position: 35% top;
+}
+
+.photo-right {
+  object-position: 70% top;
+}
 /* SCHEDULE GRAPHICS */
 .schedule-grid {
   display: grid;
