@@ -77,9 +77,12 @@ body {
 
 /* DEFAULT HEADER (football / baseball / basketball) */
 
-.site-header {
+.site-header img {
   width: 100%;
-  overflow: hidden;
+  height: 340px;
+  object-fit: cover;
+  object-position: center 55%;
+  display: block;
 }
 
 /* responsive header image – shows full image */
